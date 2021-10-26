@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, FormView
 from .forms import ApplicantForm
 
 class homePage(TemplateView):
@@ -8,12 +8,17 @@ class homePage(TemplateView):
 class volunteerListPage(TemplateView):
     template_name='volunteerlist.html'
 
-class applicantSignUpPage():
-    form = ApplicantForm()
+class thanksPage(TemplateView):
+    template_name='thanks.html'
 
-    context = {
-        'form': form,
-    }
+def applicantSignUpPage(request):
+    if request.method == 'POST':
+        form = ApplicantForm(request.POST)
+        print("POST")
+        if form.is_valid():
+            print("VALID")
+            thanksPage()
+    else:
+        form = ApplicantForm()
 
-    render('signup.html', context)
-
+    return render(request, 'signup.html', {'form': form})

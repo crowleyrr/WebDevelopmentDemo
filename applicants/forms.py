@@ -25,7 +25,7 @@ class ApplicantForm(forms.Form):
     first_name = forms.CharField(max_length=20, required=True)
     last_name = forms.CharField(max_length=20, required=True)
     age = forms.IntegerField(required=True)
-    days_available = forms.ChoiceField(required=True, choices=DAYS_OF_WEEK_CHOICES, label='Days Available to Volunteer')
+    days_available = forms.MultipleChoiceField(required=True, choices=DAYS_OF_WEEK_CHOICES, label='Days Available to Volunteer')
 
     def clean_data(self):
         data = self.cleaned_data['first_name', 'last_name', 'age', 'days_available']

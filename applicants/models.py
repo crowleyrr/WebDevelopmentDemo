@@ -23,4 +23,4 @@ class Volunteer(models.Model):
     first_name = models.CharField(max_length=20)
     last_name = models.CharField(max_length=20)
     age = models.IntegerField(default=0)
-    days_available = models.CharField(default=SATURDAY, max_length=3, choices=DAYS_OF_WEEK_CHOICES)
+    days_available = models.CharField(default=SATURDAY, max_length=30, choices=DAYS_OF_WEEK_CHOICES)
