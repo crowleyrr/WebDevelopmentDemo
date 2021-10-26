@@ -3,5 +3,6 @@ from .views import homePage, volunteerListPage
 
 urlpatterns = [
     path('', homePage.as_view(), name='home'),
-    path('/volunteers', volunteerListPage.as_view(), name='volunteers')
+    path('volunteers', volunteerListPage.as_view(), name='volunteers'),
+    path('signup', applicantSignUpPage, name='signup')
 ]
