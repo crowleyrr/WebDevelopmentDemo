@@ -1,0 +1,22 @@
+<!-- templates/base.html -->
+<header>
+    <a href="{% url 'home' %}">Home</a> <a href="{% url 'volunteers' %}">Volunteer List</a>
+  </header>
+  <head>
+    <style>
+      header {
+        font-size: 40px;
+      }
+      a {
+        outline: none;
+        text-decoration: none;
+        padding: 2px 1px 0;
+        color: white;
+      }
+      a:hover {
+        border-bottom: 1px solid;
+      }
+    </style>
+  </head>
+  {% block content %}
+  {% endblock %}
