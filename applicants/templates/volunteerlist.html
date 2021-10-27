@@ -21,7 +21,29 @@
         </head>
     <body>
     <h1>Existing Volunteers</h1>
-
+        <table>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+                <th>Monday?</th>
+                <th>Tuesday?</th>
+                <th>Wednesday?</th>
+                <th>Thursday?</th>
+                <th>Friday?</th>
+            </tr>
+            {% for volunteer in volunteers %}
+            <tr>
+                <td>{{ volunteer.first_name }}</td>
+                <td>{{ volunteer.last_name }}</td>
+                <td>{{ volunteer.age }}</td>
+                <td>{{ volunteer.avail_monday }}</td>
+                <td>{{ volunteer.avail_tuesday }}</td>
+                <td>{{ volunteer.avail_wednesday }}</td>
+                <td>{{ volunteer.avail_thursday }}</td>
+                <td>{{ volunteer.avail_friday }}</td>
+            </tr>
+        {% endfor %}
    
    </body>
     {% endblock %}
