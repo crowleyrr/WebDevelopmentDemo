@@ -29,19 +29,39 @@
                 .form {
                     background-color: red;
                 }
-                
+                #submit_btn {
+                    color:rgb(49, 42, 42);
+                    background-color: white;
+                    margin-left: 10%;
+                    font-size: 40px;
+                }
+
+                p {
+                    font-size: 40px;
+                    color: white;
+                    padding-right: 5%;
+                }
+                input {
+                    font-size: 40px;
+                }
             </style>
         </head>
     <body>
     <h1>Volunteer Sign Up</h1>
     <h2>Please fill out the fields below</h2>
 
-    <form action="/thanks/" method="post">
+    <!-- <form action="/thanks/" method="post">
         {% csrf_token %}
         {{ form }}
         <input type="submit" value="Submit">
+    </form> -->
+    <form>
+        <p>First Name: <input type="text" name="firstname"></p>
+        <p>Last Name: <input type="text" name="lastname"></p>
+        <p style="padding-left: 5.6%;">Age: <input type="text" name="age"></p>
+        <!-- <p>Days available to volunteer: <input type="" name="daysavailable"></p> -->
+        <p><input type="submit" value="Submit" id="submit_btn"></p>
     </form>
-    
     </body>
     {% endblock %}
 </html>
