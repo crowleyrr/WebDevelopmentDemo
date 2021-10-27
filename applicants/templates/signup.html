@@ -51,12 +51,13 @@
     <h1>Volunteer Sign Up</h1>
     <h2>Please fill out the fields below</h2>
 
-    <!-- <form action="/thanks/" method="post">
+    <form action="signup" method="post">
         {% csrf_token %}
-        {{ form }}
+        {{ form.as_p }}
         <input type="submit" value="Submit">
-    </form> -->
-    <form action="/thanks/" method="post">
+    </form>
+    
+    <!-- <form action="signup" method="post">
         {% csrf_token %}
         <p>First Name: <input type="text" name="firstname"></p>
         <p style="padding-left: 0.3%;">Last Name: <input type="text" name="lastname"></p>
@@ -68,6 +69,6 @@
         <p>Friday: <input type="checkbox" id="chbx" name="avail_fri"></p>
         <p><input type="submit" value="Submit" id="submit_btn"></p>
     </form>
-    </body>
+    </body> -->
     {% endblock %}
 </html>

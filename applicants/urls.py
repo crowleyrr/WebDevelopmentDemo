@@ -6,7 +6,7 @@ from django.shortcuts import render
 
 urlpatterns = [
     path('', homePage.as_view(), name='home'),
-    path('volunteers', volunteerListPage.as_view(), name='volunteers'),
+    path('volunteers', volunteerListPage, name='volunteers'),
     path('signup', applicantSignUpPage, name='signup'),
     path('thanks/', thanksPage.as_view(), name='thanks')
 ]
